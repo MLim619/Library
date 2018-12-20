@@ -32,7 +32,7 @@ namespace Library.API
             // register the DbContext on the container, getting the connection string from
             // appSettings (note: use this during development; in a production environment,
             // it's better to store the connection string in an environment variable)
-            var connectionString = Configuration["connectionStrings:libraryDBConnectionString"];
+            var connectionString = Configuration["connectionStrings:libraryDBConnectionString"]; //Configuration.GetConnectionString("libraryDBConnectionString");
             services.AddDbContext<LibraryContext>(o => o.UseSqlServer(connectionString));
 
             // register the repository
