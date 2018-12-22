@@ -38,7 +38,7 @@ namespace Library.API.Controllers
                 return NotFound();
 
             var author = Mapper.Map<AuthorDto>(authorFromRepo);
-            return new Ok(author);
+            return Ok(author);
         }
     }
 }
